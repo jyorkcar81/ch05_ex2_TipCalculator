@@ -96,7 +96,7 @@
         android:textSize="20sp" />
 
     <!-- the total -->
-    
+
     <TextView
         android:id="@+id/totalLabel"
         android:layout_width="wrap_content"
@@ -130,24 +130,95 @@
 		android:background="@android:color/black" />
         
     <!-- rounding -->
-    
+
     <TextView
         android:id="@+id/roundingLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/separatorLine"
+        android:layout_alignLeft="@+id/totalLabel"
         android:layout_below="@+id/separatorLine"
         android:padding="10dp"
         android:text="@string/rounding"
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/totalTextView"
+        android:layout_below="@+id/separatorLine"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButtonNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/none"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tip"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/roundingLabel"
+        android:layout_below="@+id/rg1"
+        android:padding="10dp"
+        android:text="@string/split"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinnerSplitBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rg1"
+        android:layout_below="@+id/rg1" />
+
+    <TextView
+        android:id="@+id/textViewPerPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_below="@+id/spinnerSplitBill"
+        android:padding="10dp"
+        android:text="@string/per_person"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewPerPersonAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewPerPerson"
+        android:layout_alignLeft="@+id/spinnerSplitBill"
+        android:layout_below="@+id/spinnerSplitBill"
+        android:padding="5dp" />
+
     <Button
         android:id="@+id/applyButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/roundingLabel"
-        android:layout_below="@+id/roundingLabel"
+        android:layout_below="@+id/textViewPerPerson"
         android:text="@string/apply" />
 
 </RelativeLayout>

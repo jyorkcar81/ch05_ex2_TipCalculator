@@ -1,0 +1,4 @@
+#Fri Oct 06 22:16:04 PDT 2017
+base.0=D\:\\scc-fall-2017\\ch05_ex2_TipCalculator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=D\:\\scc-fall-2017\\ch05_ex2_TipCalculator\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
